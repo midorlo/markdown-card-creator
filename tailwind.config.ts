@@ -1,4 +1,4 @@
-
+// tailwind.config.ts
 import type { Config } from "tailwindcss";
 
 export default {
@@ -9,7 +9,6 @@ export default {
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
   ],
-  prefix: "",
   theme: {
     container: {
       center: true,
@@ -59,10 +58,4 @@ export default {
         },
       },
       animation: {
-        "fade-up": "fade-up 0.3s ease-out",
-        "fade-in": "fade-in 0.2s ease-out",
-      },
-    },
-  },
-  plugins: [require("tailwindcss-animate")],
-} satisfies Config;
+        "fade-up": "fade-up 0.3s ease 
