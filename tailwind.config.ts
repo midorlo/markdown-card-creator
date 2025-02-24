@@ -58,4 +58,9 @@ export default {
         },
       },
       animation: {
-        "fade-up": "fade-up 0.3s ease 
+        "fade-up": "fade-up 0.3s ease",
+        "fade-in": "fade-in 0.3s ease",
+      },
+    },
+  },
+} as Config;
