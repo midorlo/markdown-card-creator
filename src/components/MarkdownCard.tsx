@@ -28,12 +28,15 @@ export const MarkdownCard = ({ content }: MarkdownCardProps) => {
 
   return (
     <div 
-      className="group relative rounded-lg border bg-card shadow-sm transition-all duration-300 hover:shadow-md animate-fade-up overflow-hidden"
+      className="group relative rounded-xl border bg-white/60 shadow-sm transition-all duration-300 hover:shadow-lg animate-fade-up overflow-hidden backdrop-blur-sm"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      style={{
+        boxShadow: isHovered ? '0 8px 32px rgba(0, 0, 0, 0.12)' : '0 2px 8px rgba(0, 0, 0, 0.08)'
+      }}
     >
-      {/* Title bar with accent color */}
-      <div className="bg-[#9b87f5] px-4 py-2 text-white font-medium">
+      {/* Title bar with Windows 11 style */}
+      <div className="bg-[#33C3F0] px-4 py-2.5 text-white font-medium">
         {title}
       </div>
       
@@ -51,7 +54,7 @@ export const MarkdownCard = ({ content }: MarkdownCardProps) => {
         </button>
       </div>
 
-      <div className="card-content p-4">
+      <div className="card-content p-5">
         <div 
           className={`overflow-y-auto transition-all duration-300 ${
             isHovered ? "custom-scrollbar max-h-[500px]" : "hide-scrollbar max-h-[140px]"

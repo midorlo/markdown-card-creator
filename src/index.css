@@ -24,12 +24,14 @@
 
   body {
     @apply bg-background text-foreground;
+    background: linear-gradient(to bottom right, #F6F6F7, #FFFFFF);
+    min-height: 100vh;
   }
 
   /* Custom Scrollbar Styling */
   .custom-scrollbar {
     scrollbar-width: thin;
-    scrollbar-color: rgba(155, 135, 245, 0.3) transparent;
+    scrollbar-color: rgba(51, 195, 240, 0.3) transparent;
   }
 
   .custom-scrollbar::-webkit-scrollbar {
@@ -41,7 +43,7 @@
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb {
-    background-color: rgba(155, 135, 245, 0.3);
+    background-color: rgba(51, 195, 240, 0.3);
     border-radius: 3px;
   }
 
