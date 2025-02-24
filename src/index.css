@@ -29,7 +29,7 @@
   /* Custom Scrollbar Styling */
   .custom-scrollbar {
     scrollbar-width: thin;
-    scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+    scrollbar-color: rgba(155, 135, 245, 0.3) transparent;
   }
 
   .custom-scrollbar::-webkit-scrollbar {
@@ -41,7 +41,7 @@
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(155, 135, 245, 0.3);
     border-radius: 3px;
   }
 
@@ -54,19 +54,9 @@
   .hide-scrollbar::-webkit-scrollbar {
     display: none;
   }
-
-  /* Show scrollbar on hover */
-  .card-content:hover .hide-scrollbar {
-    scrollbar-width: thin;
-    -ms-overflow-style: auto;
-  }
-
-  .card-content:hover .hide-scrollbar::-webkit-scrollbar {
-    display: block;
-  }
 }
 
 .fade-bottom {
-  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 }
