@@ -26,12 +26,13 @@
     @apply bg-background text-foreground;
     background: linear-gradient(to bottom right, #F6F6F7, #FFFFFF);
     min-height: 100vh;
+    font-family: "Segoe UI Variable", "Segoe UI", sans-serif;
   }
 
   /* Custom Scrollbar Styling */
   .custom-scrollbar {
     scrollbar-width: thin;
-    scrollbar-color: rgba(51, 195, 240, 0.3) transparent;
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
   }
 
   .custom-scrollbar::-webkit-scrollbar {
@@ -43,7 +44,7 @@
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb {
-    background-color: rgba(51, 195, 240, 0.3);
+    background-color: rgba(255, 255, 255, 0.3);
     border-radius: 3px;
   }
 
@@ -56,9 +57,30 @@
   .hide-scrollbar::-webkit-scrollbar {
     display: none;
   }
+
+  .font-segoe {
+    font-family: "Segoe UI Variable", "Segoe UI", sans-serif;
+  }
 }
 
 .fade-bottom {
   mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+/* Prose Overrides for Dark Background */
+.prose-invert {
+  color: rgb(255, 255, 255);
+}
+
+.prose-invert a {
+  color: rgb(255, 255, 255);
+}
+
+.prose-invert strong {
+  color: rgb(255, 255, 255);
+}
+
+.prose-invert h1, .prose-invert h2, .prose-invert h3, .prose-invert h4 {
+  color: rgb(255, 255, 255);
 }

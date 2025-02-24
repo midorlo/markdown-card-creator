@@ -28,41 +28,39 @@ export const MarkdownCard = ({ content }: MarkdownCardProps) => {
 
   return (
     <div 
-      className="group relative rounded-xl border bg-white/60 shadow-sm transition-all duration-300 hover:shadow-lg animate-fade-up overflow-hidden backdrop-blur-sm"
+      className="group relative rounded-md border bg-[#33C3F0] shadow-sm transition-all duration-300 hover:shadow-lg animate-fade-up overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{
         boxShadow: isHovered ? '0 8px 32px rgba(0, 0, 0, 0.12)' : '0 2px 8px rgba(0, 0, 0, 0.08)'
       }}
     >
-      {/* Title bar with Windows 11 style */}
-      <div className="bg-[#33C3F0] px-4 py-2.5 text-white font-medium">
-        {title}
-      </div>
-      
-      <div className="absolute right-2 top-2 z-10">
-        <button
-          onClick={copyToClipboard}
-          className="rounded-full p-2 text-white transition-all duration-200 hover:bg-white/20"
-          aria-label="Copy to clipboard"
-        >
-          {copied ? (
-            <Check className="h-4 w-4 animate-fade-in" />
-          ) : (
-            <Copy className="h-4 w-4" />
-          )}
-        </button>
-      </div>
+      <div className="p-5 text-white font-segoe">
+        <div className="text-lg font-medium mb-2">
+          {title}
+        </div>
+        
+        <div className="absolute right-2 top-2 z-10">
+          <button
+            onClick={copyToClipboard}
+            className="rounded-full p-2 text-white transition-all duration-200 hover:bg-white/20"
+            aria-label="Copy to clipboard"
+          >
+            {copied ? (
+              <Check className="h-4 w-4 animate-fade-in" />
+            ) : (
+              <Copy className="h-4 w-4" />
+            )}
+          </button>
+        </div>
 
-      <div className="card-content p-5">
         <div 
           className={`overflow-y-auto transition-all duration-300 ${
             isHovered ? "custom-scrollbar max-h-[500px]" : "hide-scrollbar max-h-[140px]"
           }`}
         >
-          <div className={`prose prose-sm max-w-none ${!isHovered ? "fade-bottom" : ""}`}>
+          <div className={`prose prose-sm max-w-none prose-invert ${!isHovered ? "fade-bottom" : ""}`}>
             <ReactMarkdown>
-              {/* Remove the title from content since we show it separately */}
               {content.split('\n').slice(1).join('\n')}
             </ReactMarkdown>
           </div>
