@@ -1,4 +1,4 @@
-
+/* index.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,8 +18,18 @@
     --ring: 240 5.9% 10%;
   }
 
-  * {
-    @apply border-border;
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 100%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 100%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 5.9% 10%;
+    --secondary-foreground: 240 4.8% 95.9%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
   }
 
   body {
@@ -57,30 +67,4 @@
   .hide-scrollbar::-webkit-scrollbar {
     display: none;
   }
-
-  .font-segoe {
-    font-family: "Segoe UI Variable", "Segoe UI", sans-serif;
-  }
-}
-
-.fade-bottom {
-  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-}
-
-/* Prose Overrides for Dark Background */
-.prose-invert {
-  color: rgb(255, 255, 255);
-}
-
-.prose-invert a {
-  color: rgb(255, 255, 255);
-}
-
-.prose-invert strong {
-  color: rgb(255, 255, 255);
-}
-
-.prose-invert h1, .prose-invert h2, .prose-invert h3, .prose-invert h4 {
-  color: rgb(255, 255, 255);
 }
